@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/LeezyRPC.iml" filepath="$PROJECT_DIR$/.idea/LeezyRPC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc-framework-common/rpc-framework-common.iml" filepath="$PROJECT_DIR$/rpc-framework-common/rpc-framework-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc-framework-simple/rpc-framework-simple.iml" filepath="$PROJECT_DIR$/rpc-framework-simple/rpc-framework-simple.iml" />
+    </modules>
+  </component>
+</project>
