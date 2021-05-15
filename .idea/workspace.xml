@@ -5,10 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b40d34d-8ad9-4a11-a979-023b803fe018" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/test/java/github/enplee/serializer/SerializerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-common/src/main/java/github/enplee/enums/CompressTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-common/src/main/java/github/enplee/enums/SerializationTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/compress/Compressor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/compress/gzip/GzipCompressor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/resources/META_INF.extensions/github.enplee.compress.compressor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/resources/META_INF.extensions/github.enplee.loadbalance.LoadBalance" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/resources/META_INF.extensions/github.enplee.serialize.Serializer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/resources/META_INF.extensions/github.javaguide.registry.ServiceDiscovery" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/resources/META_INF.extensions/github.javaguide.registry.ServiceRegistry" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/resources/META_INF.extensions/github.javaguide.remoting.transport.RpcRequestTransport" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/test/java/github/enplee/compressor/CompressTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/test/java/github/enplee/decode/DecodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-framework-common/src/test/java/github/enplee/rpcframeworkcommon/RpcFrameworkCommonApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/test/java/github/enplee/rpcframeworksimple/RpcFrameworkSimpleApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/consts/RpcConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/consts/RpcConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/dto/RpcMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/dto/RpcMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/transport/codec/RpcMessageDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/transport/codec/RpcMessageDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/transport/codec/RpcMessageEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/transport/codec/RpcMessageEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/serialize/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/serialize/Serializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/serialize/kyro/KyroSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/serialize/kyro/KyroSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/serialize/protostuff/ProtoStuffSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/serialize/protostuff/ProtoStuffSerializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +59,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rpc-framework-simple/src/main/resources/META_INF.extensions" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,20 +79,37 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\java\github.com\enplee\LeezyRPC\rpc-framework-simple\src\main\resources\META_INF.extensions" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="github.enplee.remoting.transport.codec" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SerializerTest.testProtoStuffSerializer">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CompressTest.compressTest">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompressTest.compressTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpc-framework-simple" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.enplee.compressor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="github.enplee.compressor" />
+      <option name="MAIN_CLASS_NAME" value="github.enplee.compressor.CompressTest" />
+      <option name="METHOD_NAME" value="compressTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,6 +176,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CompressTest.compressTest" />
         <item itemvalue="JUnit.SerializerTest.testProtoStuffSerializer" />
         <item itemvalue="JUnit.SerializerTest.testKyroSerializer" />
       </list>
@@ -158,7 +195,10 @@
       <workItem from="1620984872174" duration="1849000" />
       <workItem from="1620988482019" duration="2584000" />
       <workItem from="1620994513758" duration="12348000" />
-      <workItem from="1621060523876" duration="853000" />
+      <workItem from="1621060523876" duration="3244000" />
+      <workItem from="1621063867998" duration="3394000" />
+      <workItem from="1621068221391" duration="239000" />
+      <workItem from="1621068467210" duration="5305000" />
     </task>
     <servers />
   </component>
@@ -174,10 +214,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="576" y="274" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1620979807191" />
-    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1621050937878">
+    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1621087579594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621050937878" />
+    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621087579594" />
     <state x="500" y="129" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1620988503591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -192,42 +232,42 @@
     </state>
     <state x="-1020" y="635" key="FileChooserDialogImpl/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1620978284894" />
     <state x="696" y="223" key="FileChooserDialogImpl/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1620987179276" />
-    <state width="1921" height="289" key="GridCell.Tab.0.bottom" timestamp="1621061402138">
+    <state width="1921" height="289" key="GridCell.Tab.0.bottom" timestamp="1621068214428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061402138" />
-    <state width="1921" height="289" key="GridCell.Tab.0.center" timestamp="1621061402138">
+    <state width="1921" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621068214428" />
+    <state width="1921" height="289" key="GridCell.Tab.0.center" timestamp="1621068214428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061402138" />
-    <state width="1921" height="289" key="GridCell.Tab.0.left" timestamp="1621061402138">
+    <state width="1921" height="289" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621068214428" />
+    <state width="1921" height="289" key="GridCell.Tab.0.left" timestamp="1621068214428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061402138" />
-    <state width="1921" height="289" key="GridCell.Tab.0.right" timestamp="1621061402138">
+    <state width="1921" height="289" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621068214428" />
+    <state width="1921" height="289" key="GridCell.Tab.0.right" timestamp="1621068214428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061402138" />
-    <state width="1921" height="356" key="GridCell.Tab.1.bottom" timestamp="1621061134563">
+    <state width="1921" height="289" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621068214428" />
+    <state width="1921" height="356" key="GridCell.Tab.1.bottom" timestamp="1621063859749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061134563" />
-    <state width="1921" height="356" key="GridCell.Tab.1.center" timestamp="1621061134563">
+    <state width="1921" height="356" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621063859749" />
+    <state width="1921" height="356" key="GridCell.Tab.1.center" timestamp="1621063859749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.center/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061134563" />
-    <state width="1921" height="356" key="GridCell.Tab.1.left" timestamp="1621061134563">
+    <state width="1921" height="356" key="GridCell.Tab.1.center/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621063859749" />
+    <state width="1921" height="356" key="GridCell.Tab.1.left" timestamp="1621063859749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.left/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061134563" />
-    <state width="1921" height="356" key="GridCell.Tab.1.right" timestamp="1621061134563">
+    <state width="1921" height="356" key="GridCell.Tab.1.left/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621063859749" />
+    <state width="1921" height="356" key="GridCell.Tab.1.right" timestamp="1621063859749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.right/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061134563" />
-    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1620994498126">
+    <state width="1921" height="356" key="GridCell.Tab.1.right/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621063859749" />
+    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1621066769358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1620994498126" />
+    <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621066769358" />
     <state x="361" y="89" key="SettingsEditor" timestamp="1620987346533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -242,9 +282,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="741" y="265" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1620983699861" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1621045043938">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1621064314311">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621045043938" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621064314311" />
   </component>
 </project>

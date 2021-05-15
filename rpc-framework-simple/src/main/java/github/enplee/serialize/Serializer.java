@@ -11,5 +11,5 @@ public interface Serializer {
 
     byte[] serialize(Object object);
 
-    <T> T seSerialize(byte[] bytes,Class<T> clazz);
+    <T> T deSerialize(byte[] bytes,Class<T> clazz);
 }

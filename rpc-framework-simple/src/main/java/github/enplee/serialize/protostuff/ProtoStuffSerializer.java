@@ -29,7 +29,7 @@ public class ProtoStuffSerializer implements Serializer {
     }
 
     @Override
-    public <T> T seSerialize(byte[] bytes, Class<T> clazz) {
+    public <T> T deSerialize(byte[] bytes, Class<T> clazz) {
         Schema<T> schema = RuntimeSchema.getSchema(clazz);
         T obj = schema.newMessage();
         ProtobufIOUtil.mergeFrom(bytes,obj,schema);

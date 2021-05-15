@@ -13,8 +13,9 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Setter
 public class RpcMessage {
-    // message type
+    // message type: HEARTBEAT_REQUEST_TYPE  HEARTBEAT_RESPONCE_TYPE NORMAL_TYPE
     private byte messageType;
     // serialization type
     private byte codec;

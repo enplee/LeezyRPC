@@ -7,10 +7,6 @@ import github.enplee.exception.SerialzeException;
 import github.enplee.remoting.dto.RpcRequest;
 import github.enplee.remoting.dto.RpcResponce;
 import github.enplee.serialize.Serializer;
-import io.protostuff.LinkedBuffer;
-import io.protostuff.ProtobufIOUtil;
-import io.protostuff.Schema;
-import io.protostuff.runtime.RuntimeSchema;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -44,7 +40,7 @@ public class KyroSerializer implements Serializer {
     }
 
     @Override
-    public <T> T seSerialize(byte[] bytes, Class<T> clazz) {
+    public <T> T deSerialize(byte[] bytes, Class<T> clazz) {
         try(ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
             Input input = new Input(byteArrayInputStream)) {
             final Kryo kryo = kryoThreadLocal.get();

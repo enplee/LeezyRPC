@@ -1,0 +1,1 @@
+loadBalance=github.enplee.loadbalance.loadbalancer.ConsistentHashLoadBalance

@@ -1,11 +1,17 @@
 package github.enplee.remoting.transport.codec;
 
+import github.enplee.compress.Compressor;
+import github.enplee.compress.gzip.GzipCompressor;
 import github.enplee.remoting.consts.RpcConstants;
 import github.enplee.remoting.dto.RpcMessage;
+import github.enplee.remoting.dto.RpcRequest;
+import github.enplee.remoting.dto.RpcResponce;
+import github.enplee.serialize.Serializer;
+import github.enplee.serialize.protostuff.ProtoStuffSerializer;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
-import io.protostuff.Rpc;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 
@@ -15,6 +21,7 @@ import java.util.Arrays;
  *  @Date: 2021/5/14 22:11
  *  @Description:
  */
+@Slf4j
 public class RpcMessageDecoder extends LengthFieldBasedFrameDecoder {
 
     public RpcMessageDecoder(){
@@ -37,7 +44,13 @@ public class RpcMessageDecoder extends LengthFieldBasedFrameDecoder {
         if(decoded instanceof ByteBuf) {
             ByteBuf frame = (ByteBuf) decoded;
             if(frame.readableBytes() >= RpcConstants.TOTAL_LENGTH) {
-
+                try {
+                    return decodeFrame(in);
+                }catch (Exception e){
+                    log.error("Decode frame error!",e);
+                }finally {
+                    frame.release();
+                }
             }
         }
         return decoded;
@@ -47,7 +60,42 @@ public class RpcMessageDecoder extends LengthFieldBasedFrameDecoder {
         checkMagicNumber(in);
         checkVersion(in); //  offset -> 5
         int fullLength = in.readInt();
-        //TODO: 构建PpcMessage & DeCompress/DeSerialize body
+        byte messageType = in.readByte();
+        byte codec = in.readByte();
+        byte compress = in.readByte();
+        int requestId = in.readInt();
+        RpcMessage rpcMessage = RpcMessage.builder().messageType(messageType).codec(codec).compress(compress).requestId(requestId).build();
+
+        if(messageType == RpcConstants.HEARTBEAT_REQUEST_TYPE){
+            rpcMessage.setBody(RpcConstants.PING);
+            return rpcMessage;
+        }
+        if(messageType == RpcConstants.HEARTBEAT_RESPONCE_TYPE){
+            rpcMessage.setBody(RpcConstants.PONG);
+            return rpcMessage;
+        }
+
+        int bodyLength = fullLength-RpcConstants.MAX_HEAD_LENGTH;
+        if(bodyLength > 0) {
+            byte[] bytes = new byte[bodyLength];
+            in.readBytes(bytes);
+            //TODO: 使用SPI机制，让接口和实现解耦
+
+            //decompress the bytes accoding to the compressType
+            Compressor compressor = new GzipCompressor();
+            byte[] decompress = compressor.decompress(bytes);
+            //deserialize the bytes accoding to the codec
+            Serializer serializer = new ProtoStuffSerializer();
+            if(messageType == RpcConstants.REQUEST_TYPE){
+                RpcRequest rpcRequest = serializer.deSerialize(bytes, RpcRequest.class);
+                rpcMessage.setBody(rpcRequest);
+            }
+            if(messageType == RpcConstants.RESPONCE_TYPE){
+                RpcResponce rpcResponce = serializer.deSerialize(bytes, RpcResponce.class);
+                rpcMessage.setBody(rpcResponce);
+            }
+            return rpcMessage;
+        }
         return null;
     }
 
