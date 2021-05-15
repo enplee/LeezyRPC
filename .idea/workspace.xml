@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b40d34d-8ad9-4a11-a979-023b803fe018" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rpc-framework-common/src/main/java/github/enplee/exception/SerialzeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/test/java/github/enplee/serializer/SerializerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/serialize/kyro/KyroSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/serialize/kyro/KyroSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/serialize/protostuff/ProtoStuffSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/serialize/protostuff/ProtoStuffSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-common/src/test/java/github/enplee/rpcframeworkcommon/RpcFrameworkCommonApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/test/java/github/enplee/rpcframeworksimple/RpcFrameworkSimpleApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,14 +64,48 @@
       <recent name="github.enplee.remoting.transport.codec" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.EnpleeApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SerializerTest.testProtoStuffSerializer">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SerializerTest.testKyroSerializer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpc-framework-simple" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.enplee.serializer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="github.enplee.serializer" />
+      <option name="MAIN_CLASS_NAME" value="github.enplee.serializer.SerializerTest" />
+      <option name="METHOD_NAME" value="testKyroSerializer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SerializerTest.testProtoStuffSerializer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpc-framework-simple" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.enplee.serializer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="github.enplee.serializer" />
+      <option name="MAIN_CLASS_NAME" value="github.enplee.serializer.SerializerTest" />
+      <option name="METHOD_NAME" value="testProtoStuffSerializer" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,6 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SerializerTest.testProtoStuffSerializer" />
+        <item itemvalue="JUnit.SerializerTest.testKyroSerializer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -117,7 +157,8 @@
       <workItem from="1620984039741" duration="821000" />
       <workItem from="1620984872174" duration="1849000" />
       <workItem from="1620988482019" duration="2584000" />
-      <workItem from="1620994513758" duration="11769000" />
+      <workItem from="1620994513758" duration="12348000" />
+      <workItem from="1621060523876" duration="853000" />
     </task>
     <servers />
   </component>
@@ -151,6 +192,38 @@
     </state>
     <state x="-1020" y="635" key="FileChooserDialogImpl/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1620978284894" />
     <state x="696" y="223" key="FileChooserDialogImpl/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1620987179276" />
+    <state width="1921" height="289" key="GridCell.Tab.0.bottom" timestamp="1621061402138">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061402138" />
+    <state width="1921" height="289" key="GridCell.Tab.0.center" timestamp="1621061402138">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="289" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061402138" />
+    <state width="1921" height="289" key="GridCell.Tab.0.left" timestamp="1621061402138">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="289" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061402138" />
+    <state width="1921" height="289" key="GridCell.Tab.0.right" timestamp="1621061402138">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="289" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061402138" />
+    <state width="1921" height="356" key="GridCell.Tab.1.bottom" timestamp="1621061134563">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="356" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061134563" />
+    <state width="1921" height="356" key="GridCell.Tab.1.center" timestamp="1621061134563">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="356" key="GridCell.Tab.1.center/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061134563" />
+    <state width="1921" height="356" key="GridCell.Tab.1.left" timestamp="1621061134563">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="356" key="GridCell.Tab.1.left/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061134563" />
+    <state width="1921" height="356" key="GridCell.Tab.1.right" timestamp="1621061134563">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="356" key="GridCell.Tab.1.right/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621061134563" />
     <state x="540" y="254" key="IDE.errors.dialog" timestamp="1620994498126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

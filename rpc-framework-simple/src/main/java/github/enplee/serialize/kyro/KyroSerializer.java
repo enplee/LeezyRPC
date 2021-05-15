@@ -31,7 +31,7 @@ public class KyroSerializer implements Serializer {
     });
 
     @Override
-    public byte[] Serialize(Object object) {
+    public byte[] serialize(Object object) {
         try(ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             Output output = new Output(byteArrayOutputStream)) {
             Kryo kryo = kryoThreadLocal.get();
@@ -44,7 +44,7 @@ public class KyroSerializer implements Serializer {
     }
 
     @Override
-    public <T> T DeSerialize(byte[] bytes, Class<T> clazz) {
+    public <T> T seSerialize(byte[] bytes, Class<T> clazz) {
         try(ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
             Input input = new Input(byteArrayInputStream)) {
             final Kryo kryo = kryoThreadLocal.get();

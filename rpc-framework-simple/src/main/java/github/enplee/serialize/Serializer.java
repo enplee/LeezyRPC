@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 public interface Serializer {
 
-    byte[] Serialize(Object object);
+    byte[] serialize(Object object);
 
-    <T> T DeSerialize(byte[] bytes,Class<T> clazz);
+    <T> T seSerialize(byte[] bytes,Class<T> clazz);
 }

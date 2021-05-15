@@ -16,7 +16,7 @@ public class ProtoStuffSerializer implements Serializer {
     private static final LinkedBuffer BUFFER = LinkedBuffer.allocate(LinkedBuffer.DEFAULT_BUFFER_SIZE);
 
     @Override
-    public byte[] Serialize(Object object) {
+    public byte[] serialize(Object object) {
         Class<?> clazz = object.getClass();
         Schema schema = RuntimeSchema.getSchema(clazz);
         byte[] bytes;
@@ -29,7 +29,7 @@ public class ProtoStuffSerializer implements Serializer {
     }
 
     @Override
-    public <T> T DeSerialize(byte[] bytes, Class<T> clazz) {
+    public <T> T seSerialize(byte[] bytes, Class<T> clazz) {
         Schema<T> schema = RuntimeSchema.getSchema(clazz);
         T obj = schema.newMessage();
         ProtobufIOUtil.mergeFrom(bytes,obj,schema);
