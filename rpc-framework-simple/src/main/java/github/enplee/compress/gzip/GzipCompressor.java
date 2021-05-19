@@ -18,7 +18,7 @@ public class GzipCompressor implements Compressor {
     private static final int BUFFER_SIZE = 1024 * 4;
     @Override
     public byte[] compress(byte[] bytes) {
-        if(bytes == null) {
+        if (bytes == null) {
             throw new NullPointerException("bytes is null");
         }
         try(ByteArrayOutputStream arrayOutputStream = new ByteArrayOutputStream();

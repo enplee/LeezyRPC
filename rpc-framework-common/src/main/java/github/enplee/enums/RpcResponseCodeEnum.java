@@ -9,8 +9,8 @@ import lombok.ToString;
 @ToString
 public enum RpcResponseCodeEnum {
 
-    SUCCESS(200,"The remote process call is successful"),
-    FAIL(500,"The remote process call is fail");
+    SUCCESS(200, "The remote process call is successful"),
+    FAIL(500, "The remote process call is fail");
     private final int code;
     private final String message;
 }
