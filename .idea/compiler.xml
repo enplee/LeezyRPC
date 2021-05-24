@@ -7,14 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Rpc-client-example" />
+        <module name="Rpc-server-example" />
         <module name="rpc-framework-simple" />
         <module name="rpc-framework-common" />
+        <module name="service-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="LeezyRPC" target="14" />
+      <module name="Rpc-client-example" target="14" />
       <module name="rpc-framework-common" target="14" />
       <module name="rpc-framework-simple" target="14" />
+      <module name="Rpc-server-example" target="14" />
+      <module name="service-api" target="14" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

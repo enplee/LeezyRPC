@@ -1,18 +1,25 @@
 package github.enplee.remoting.transport.server;
 
 import github.enplee.Utils.RuntimeUtil;
+import github.enplee.config.RpcSerciceConfig;
+import github.enplee.factory.SingletonFactory;
+import github.enplee.provider.ServiceProvider;
+import github.enplee.provider.impl.ServiceProviderImpl;
 import github.enplee.remoting.transport.codec.RpcMessageDecoder;
 import github.enplee.remoting.transport.codec.RpcMessageEncoder;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import io.netty.handler.timeout.IdleStateHandler;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import java.net.InetAddress;
+import java.util.concurrent.TimeUnit;
 
 /**
  *  @author: leezy
@@ -24,6 +31,11 @@ public class RpcNettyServer {
 
     public static final int PORT = 9090;
 
+    private final ServiceProvider serviceProvider = SingletonFactory.getInstance(ServiceProviderImpl.class);
+
+    public void registerService(RpcSerciceConfig rpcSerciceConfig){
+        serviceProvider.publishService(rpcSerciceConfig);
+    }
 
     @SneakyThrows
     public void start() {
@@ -40,10 +52,12 @@ public class RpcNettyServer {
                      .childOption(ChannelOption.TCP_NODELAY,true)
                      .childOption(ChannelOption.SO_KEEPALIVE,true)
                      .handler(new LoggingHandler(LogLevel.INFO))
-                     .childHandler(new ChannelInitializer<NioServerSocketChannel>() {
+                     // TODO: analyze SocketChannel?ServerSockerChannel
+                     .childHandler(new ChannelInitializer<SocketChannel>() {
                          @Override
-                         protected void initChannel(NioServerSocketChannel ch) throws Exception {
+                         protected void initChannel(SocketChannel ch) throws Exception {
                              ChannelPipeline p = ch.pipeline();
+                             p.addLast(new IdleStateHandler(30, 0, 0, TimeUnit.SECONDS));
                              p.addLast(new RpcMessageEncoder());
                              p.addLast(new RpcMessageDecoder());
                              p.addLast(serviceHandlerGroup,new RpcNettyServerHanlder());

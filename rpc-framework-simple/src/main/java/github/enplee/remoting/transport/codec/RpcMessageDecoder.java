@@ -40,12 +40,13 @@ public class RpcMessageDecoder extends LengthFieldBasedFrameDecoder {
 
     @Override
     protected Object decode(ChannelHandlerContext ctx, ByteBuf in) throws Exception {
+        log.info("ByteBuf in size {}",in);
         Object decoded = super.decode(ctx, in);
         if(decoded instanceof ByteBuf) {
             ByteBuf frame = (ByteBuf) decoded;
             if(frame.readableBytes() >= RpcConstants.TOTAL_LENGTH) {
                 try {
-                    return decodeFrame(in);
+                    return decodeFrame(frame);
                 }catch (Exception e){
                     log.error("Decode frame error!",e);
                 }finally {
@@ -87,16 +88,15 @@ public class RpcMessageDecoder extends LengthFieldBasedFrameDecoder {
             //deserialize the bytes accoding to the codec
             Serializer serializer = new ProtoStuffSerializer();
             if(messageType == RpcConstants.REQUEST_TYPE){
-                RpcRequest rpcRequest = serializer.deSerialize(bytes, RpcRequest.class);
+                RpcRequest rpcRequest = serializer.deSerialize(decompress, RpcRequest.class);
                 rpcMessage.setBody(rpcRequest);
             }
             if(messageType == RpcConstants.RESPONCE_TYPE){
-                RpcResponce rpcResponce = serializer.deSerialize(bytes, RpcResponce.class);
+                RpcResponce rpcResponce = serializer.deSerialize(decompress, RpcResponce.class);
                 rpcMessage.setBody(rpcResponce);
             }
-            return rpcMessage;
         }
-        return null;
+        return rpcMessage;
     }
 
     private void checkVersion(ByteBuf in) {

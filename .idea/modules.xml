@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/LeezyRPC.iml" filepath="$PROJECT_DIR$/.idea/LeezyRPC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rpc-client-example/Rpc-client-example.iml" filepath="$PROJECT_DIR$/Rpc-client-example/Rpc-client-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rpc-server-example/Rpc-server-example.iml" filepath="$PROJECT_DIR$/Rpc-server-example/Rpc-server-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/rpc-framework-common/rpc-framework-common.iml" filepath="$PROJECT_DIR$/rpc-framework-common/rpc-framework-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/rpc-framework-simple/rpc-framework-simple.iml" filepath="$PROJECT_DIR$/rpc-framework-simple/rpc-framework-simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-api/service-api.iml" filepath="$PROJECT_DIR$/service-api/service-api.iml" />
     </modules>
   </component>
 </project>

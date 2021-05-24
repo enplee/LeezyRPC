@@ -28,13 +28,14 @@ public class RpcMessageEncoder extends MessageToByteEncoder<RpcMessage> {
     @Override
     protected void encode(ChannelHandlerContext ctx, RpcMessage msg, ByteBuf out) throws Exception {
         try {
+            log.info("decode message : [{}]",msg);
             // write message head
             out.writeBytes(RpcConstants.MAGIC_NUMBER);
             out.writeByte(RpcConstants.VERSION);
             out.writerIndex(out.writerIndex()+4); // leave fullLength
             out.writeByte(msg.getMessageType());
             out.writeByte(msg.getCodec());
-            out.writeByte(msg.getCompress());
+            out.writeByte(CompressTypeEnum.GZIP.getCode());
             out.writeInt(ATOMIC_INTEGER.getAndIncrement());
             // write message body
             byte[] bodyBytes = null;
@@ -49,11 +50,12 @@ public class RpcMessageEncoder extends MessageToByteEncoder<RpcMessage> {
                 fullLength += bodyBytes.length;
             }
             if(bodyBytes != null) {
+                log.info("ready to sent MessageBody,length [{}]",bodyBytes.length);
                 out.writeBytes(bodyBytes);
             }
             // write fullLength and recover offset to the end
             int writeIdx = out.writerIndex();
-            out.writerIndex(writeIdx - fullLength + RpcConstants.MAX_HEAD_LENGTH + 1);
+            out.writerIndex(writeIdx - fullLength + RpcConstants.MAGIC_NUMBER.length + 1);
             out.writeInt(fullLength);
             out.writerIndex(writeIdx);
         }catch (Exception e){

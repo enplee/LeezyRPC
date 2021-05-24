@@ -4,10 +4,12 @@ package github.enplee.remoting.transport.server;
 import github.enplee.enums.CompressTypeEnum;
 import github.enplee.enums.RpcResponseCodeEnum;
 import github.enplee.enums.SerializationTypeEnum;
+import github.enplee.factory.SingletonFactory;
 import github.enplee.remoting.consts.RpcConstants;
 import github.enplee.remoting.dto.RpcMessage;
 import github.enplee.remoting.dto.RpcRequest;
 import github.enplee.remoting.dto.RpcResponce;
+import github.enplee.remoting.handler.RpcRequestHanlder;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -24,6 +26,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class RpcNettyServerHanlder extends ChannelInboundHandlerAdapter {
 
+    private final RpcRequestHanlder rpcRequestHanlder;
+
+    public RpcNettyServerHanlder() {
+        this.rpcRequestHanlder = SingletonFactory.getInstance(RpcRequestHanlder.class);
+    }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
@@ -42,18 +49,20 @@ public class RpcNettyServerHanlder extends ChannelInboundHandlerAdapter {
                 }else if(messageType == RpcConstants.REQUEST_TYPE){
                     // handle the request and call the method
                     RpcRequest rpcRequest = (RpcRequest)message.getBody();
-                    // call method get result
-                    Object result = null;
+                    // TODO：call method get result -- done
+                    Object result = rpcRequestHanlder.handle(rpcRequest);
                     rpcMessage.setMessageType(RpcConstants.RESPONCE_TYPE);
                     if(ctx.channel().isActive() && ctx.channel().isWritable()){
-                        RpcResponce<Object> rpcResponce = RpcResponce.success(result, rpcRequest.getRequestId());
-                        rpcMessage.setBody(rpcMessage);
+                        RpcResponce<Object> responce = RpcResponce.success(result, rpcRequest.getRequestId());
+                        rpcMessage.setBody(responce);
                     }else {
                         RpcResponce<Object> responce = RpcResponce.fail(RpcResponseCodeEnum.FAIL);
                         rpcMessage.setBody(responce);
                     }
+                    // TODO: analize
+                    log.info("send rpcMessage: [{}]",rpcMessage);
+                    ctx.writeAndFlush(rpcMessage).addListener(ChannelFutureListener.CLOSE_ON_FAILURE);
                 }
-                ctx.writeAndFlush(rpcMessage).addListener(ChannelFutureListener.CLOSE_ON_FAILURE);
             }
         } finally {
             ReferenceCountUtil.release(msg);
