@@ -16,7 +16,7 @@
 - [x] 传输协议设计，定义Rpcresquest/Rpcresponce/Fream等。
 - [x] 基于Netty实现Rpcmessage的传输接收、编码解码。
 - [x] 基于kyro、protostuff实现对象序列化与反序列化，Gzip实现压缩传输。
-- [x] 使用zookeeper作为服务中心管理服务地址。
+- [x] 使用zookeeper作为服务中心管理服务地址。使用Curator客户端框架进行zk的操作。
 - [x] 处理一个服务有多个实现的情况，通过增加group进行分组。
 - [ ] 使用Spring注解的方式实现实现服务的注册和消费。
 - [ ] 增加SPI机制的应用，实现接口和实现解耦。 
