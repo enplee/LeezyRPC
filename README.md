@@ -18,5 +18,9 @@
 - [x] 基于kyro、protostuff实现对象序列化与反序列化，Gzip实现压缩传输。
 - [x] 使用zookeeper作为服务中心管理服务地址。使用Curator客户端框架进行zk的操作。
 - [x] 处理一个服务有多个实现的情况，通过增加group进行分组。
+- [x] 实现单例工厂对对象进行管理 (未来尝试讨论Spring容器进行对象管理的必要性)
+- [x] 增加ServiceProvider容器统一管理服务对象，client、server服务注册和消费面向ServiceProvider。
+- [x] 实现对多个server的负载均衡，采用随机策略和一致性哈希策略。
+- [x] 通过JDK自带的动态代理方式屏蔽调用过程。
 - [ ] 使用Spring注解的方式实现实现服务的注册和消费。
 - [ ] 增加SPI机制的应用，实现接口和实现解耦。 
