@@ -108,19 +108,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CompressTest.compressTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpc-framework-simple" />
       <extension name="coverage">
@@ -237,7 +224,8 @@
       <workItem from="1621598098461" duration="4568000" />
       <workItem from="1621665496629" duration="806000" />
       <workItem from="1621736807114" duration="13397000" />
-      <workItem from="1621821499694" duration="18358000" />
+      <workItem from="1621821499694" duration="18530000" />
+      <workItem from="1621924409031" duration="1104000" />
     </task>
     <servers />
   </component>
@@ -337,9 +325,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="741" y="265" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621598049440" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1621827734849">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1621925256675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621827734849" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621925256675" />
   </component>
 </project>
