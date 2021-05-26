@@ -3,6 +3,7 @@ package github.enplee.provider.impl;
 import github.enplee.config.RpcServiceConfig;
 import github.enplee.enums.RpcErrorMessageEnum;
 import github.enplee.exception.RpcException;
+import github.enplee.factory.SingletonFactory;
 import github.enplee.provider.ServiceProvider;
 import github.enplee.registry.ServiceRegistry;
 import github.enplee.registry.zk.ZkserviceRegistryImpl;
@@ -26,7 +27,7 @@ public class ServiceProviderImpl implements ServiceProvider {
         this.serviceMap = new ConcurrentHashMap<>();
         this.registedServiceSet = ConcurrentHashMap.newKeySet();
         //TODO: spi
-        this.serviceRegistry = new ZkserviceRegistryImpl();
+        this.serviceRegistry = SingletonFactory.getInstance(ZkserviceRegistryImpl.class);
     }
 
     @Override
