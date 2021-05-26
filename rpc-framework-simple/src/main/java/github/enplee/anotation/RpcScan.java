@@ -1,4 +1,4 @@
-package github.enplee.spring.anotation;
+package github.enplee.anotation;
 
 
 import github.enplee.spring.CustomScannerRegistrar;

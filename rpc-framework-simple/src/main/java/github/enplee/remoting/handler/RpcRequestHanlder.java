@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 /**
  *  @author: leezy
  *  @Date: 2021/5/23 16:21
- *  @Description: 处理Rpcrequest的方法调用
+ *  @Description: 处理Rpc request的方法调用
  *  1. 从serviceProvider容器中取得服务对象
  *  2. 利用反射的方式，调用service对象对应的方法
  *  3. 返回方法调用的结果
@@ -29,7 +29,7 @@ public class RpcRequestHanlder {
     }
 
     public Object handle(RpcRequest rpcRequest) {
-        Object service = serviceProvider.getService(rpcRequest.getServiceName());
+        Object service = serviceProvider.getService(rpcRequest.getRpcServiceName());
         return invokeTargetMethod(rpcRequest,service);
     }
 

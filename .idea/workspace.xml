@@ -5,18 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b40d34d-8ad9-4a11-a979-023b803fe018" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/SpringBeanPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/anotation/RpcRefence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/anotation/RpcService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rpc-client-example/src/main/java/github/enplee/spring/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rpc-client-example/src/main/java/github/enplee/spring/RpcClientMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rpc-server-example/src/main/java/github/enplee/serviceImpl/TestServiceImplTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rpc-server-example/src/main/java/github/enplee/spring/RpcServerMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rpc-client-example/src/main/java/github/enplee/nospring/NoSpringClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rpc-client-example/src/main/java/github/enplee/nospring/NoSpringClientMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rpc-server-example/src/main/java/github/enplee/nospring/NoSpringServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rpc-server-example/src/main/java/github/enplee/nospring/NoSpringServerMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rpc-server-example/src/main/java/github/enplee/serviceImpl/TestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rpc-server-example/src/main/java/github/enplee/serviceImpl/TestServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/config/RpcSerciceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/config/RpcServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/provider/ServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/provider/ServiceProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/provider/impl/ServiceProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/provider/impl/ServiceProviderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/proxy/RpcClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/proxy/RpcClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rpc-server-example/target/classes/github/enplee/serviceImpl/TestServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Rpc-server-example/target/classes/github/enplee/serviceImpl/TestServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/dto/RpcRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/dto/RpcRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/handler/RpcRequestHanlder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/handler/RpcRequestHanlder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/transport/server/RpcNettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/transport/server/RpcNettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/CustomScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/CustomScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/CustomScannerRegistrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/CustomScannerRegistrar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/SpringBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/SpringBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/anotation/RpcRefence.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/anotation/RpcRefence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/anotation/RpcScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/anotation/RpcScan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/anotation/RpcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/anotation/RpcService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +96,7 @@
       <recent name="D:\project\java\github.com\enplee\LeezyRPC\rpc-framework-simple\src\test\java\github\enplee" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NoSpringClientMain">
+  <component name="RunManager" selected="Application.RpcClientMain">
     <configuration name="NoSpringClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="github.enplee.nospring.NoSpringClientMain" />
       <module name="Rpc-client-example" />
@@ -119,6 +123,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RpcClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.enplee.spring.RpcClientMain" />
+      <module name="Rpc-client-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.enplee.spring.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RpcServerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.enplee.spring.RpcServerMain" />
+      <module name="Rpc-server-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.enplee.spring.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -128,37 +158,6 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CompressTest.compressTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rpc-framework-simple" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="github.enplee.compressor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="github.enplee.compressor" />
-      <option name="MAIN_CLASS_NAME" value="github.enplee.compressor.CompressTest" />
-      <option name="METHOD_NAME" value="compressTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="zkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rpc-framework-simple" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="github.enplee.zkTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="github.enplee.zkTest" />
-      <option name="MAIN_CLASS_NAME" value="github.enplee.zkTest.zkTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -209,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RpcClientMain" />
+        <item itemvalue="Application.RpcServerMain" />
         <item itemvalue="Application.NoSpringClientMain" />
         <item itemvalue="Application.NoSpringServerMain" />
         <item itemvalue="JUnit.zkTest.zkClientTest" />
-        <item itemvalue="JUnit.zkTest" />
-        <item itemvalue="JUnit.CompressTest.compressTest" />
       </list>
     </recent_temporary>
   </component>
@@ -251,6 +250,8 @@
       <workItem from="1621821499694" duration="18530000" />
       <workItem from="1621924409031" duration="10145000" />
       <workItem from="1621942962036" duration="3604000" />
+      <workItem from="1622014719980" duration="2924000" />
+      <workItem from="1622018336129" duration="8378000" />
     </task>
     <servers />
   </component>
@@ -270,19 +271,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="576" y="274" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1620979807191" />
-    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1621942495854">
+    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1622017924291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621942495854" />
+    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1622017924291" />
     <state x="500" y="129" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1620988503591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1183" y="558" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1620978142658" />
     <state x="500" y="129" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1620988503591" />
-    <state x="481" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1621596906022">
+    <state x="481" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1622019576125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="481" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621596906022" />
+    <state x="481" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1622019576125" />
     <state x="653" y="194" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1621942910307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -300,26 +301,26 @@
     </state>
     <state x="-1020" y="635" key="FileChooserDialogImpl/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1620978284894" />
     <state x="696" y="223" key="FileChooserDialogImpl/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621861648262" />
-    <state width="1876" height="223" key="GridCell.Tab.0.bottom" timestamp="1621945421773">
+    <state width="1876" height="223" key="GridCell.Tab.0.bottom" timestamp="1622033324125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1556" height="671" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1621426519390" />
-    <state width="1876" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621945421773" />
-    <state width="1876" height="223" key="GridCell.Tab.0.center" timestamp="1621945421773">
+    <state width="1876" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1622033324125" />
+    <state width="1876" height="223" key="GridCell.Tab.0.center" timestamp="1622033324125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1556" height="671" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1621426519390" />
-    <state width="1876" height="223" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621945421773" />
-    <state width="1876" height="223" key="GridCell.Tab.0.left" timestamp="1621945421773">
+    <state width="1876" height="223" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1622033324125" />
+    <state width="1876" height="223" key="GridCell.Tab.0.left" timestamp="1622033324125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1556" height="671" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1621426519390" />
-    <state width="1876" height="223" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621945421773" />
-    <state width="1876" height="223" key="GridCell.Tab.0.right" timestamp="1621945421773">
+    <state width="1876" height="223" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1622033324125" />
+    <state width="1876" height="223" key="GridCell.Tab.0.right" timestamp="1622033324125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1556" height="671" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1621426519390" />
-    <state width="1876" height="223" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621945421773" />
+    <state width="1876" height="223" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1622033324125" />
     <state width="1921" height="356" key="GridCell.Tab.1.bottom" timestamp="1621063859749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

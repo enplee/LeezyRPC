@@ -7,10 +7,9 @@ import github.enplee.provider.impl.ServiceProviderImpl;
 import github.enplee.proxy.RpcClientProxy;
 import github.enplee.remoting.transport.RpcRequestTransposter;
 import github.enplee.remoting.transport.client.RpcNettyClient;
-import github.enplee.spring.anotation.RpcRefence;
-import github.enplee.spring.anotation.RpcService;
+import github.enplee.anotation.RpcRefence;
+import github.enplee.anotation.RpcService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.aop.aspectj.SingletonAspectInstanceFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
@@ -39,8 +38,9 @@ public class SpringBeanPostProcessor implements BeanPostProcessor {
         if(bean.getClass().isAnnotationPresent(RpcService.class)) {
             log.info("[{}] is annotated with [{}]", bean.getClass().getName(),RpcService.class.getCanonicalName());
             RpcService rpcService = bean.getClass().getAnnotation(RpcService.class);
+            log.info("beanName test : [{}]",beanName);
             RpcServiceConfig serviceConfig = RpcServiceConfig.builder()
-                                            .service(beanName)
+                                            .service(bean)
                                             .group(rpcService.group())
                                             .version(rpcService.version()).build();
             serviceProvider.publishService(serviceConfig);
@@ -51,13 +51,16 @@ public class SpringBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         // 检查filed是否由RpcReference注解
+        log.info("执行postProcessAfterInitialization");
         Field[] declaredFields = bean.getClass().getDeclaredFields();
         for(Field declaredField : declaredFields) {
             RpcRefence annotation = declaredField.getAnnotation(RpcRefence.class);
             if(annotation != null ) {
+
                 RpcServiceConfig serviceConfig = RpcServiceConfig.builder()
                                                 .group(annotation.group())
                                                 .version(annotation.version()).build();
+                log.info("serviceConfig: [{}]",serviceConfig);
                 RpcClientProxy rpcClientProxy = new RpcClientProxy(serviceConfig, rpcRequestTransposter);
                 Object proxy = rpcClientProxy.getProxy(declaredField.getType());
                 try {

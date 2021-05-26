@@ -4,11 +4,10 @@ import github.enplee.Test;
 import github.enplee.TestService;
 import github.enplee.anotation.RpcService;
 
-
-@RpcService(version = "1",group = "1")
-public class TestServiceImpl implements TestService {
+@RpcService(version = "1",group = "2")
+public class TestServiceImplTwo implements TestService {
     @Override
     public String test(Test test) {
-        return "TestServiceImplOne" + test.getMessage()+test.getDescription();
+        return "TestServiceImplTwo" + test.getMessage()+test.getDescription();
     }
 }
