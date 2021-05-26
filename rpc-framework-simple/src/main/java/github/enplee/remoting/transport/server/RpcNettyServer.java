@@ -1,7 +1,7 @@
 package github.enplee.remoting.transport.server;
 
 import github.enplee.Utils.RuntimeUtil;
-import github.enplee.config.RpcSerciceConfig;
+import github.enplee.config.RpcServiceConfig;
 import github.enplee.factory.SingletonFactory;
 import github.enplee.provider.ServiceProvider;
 import github.enplee.provider.impl.ServiceProviderImpl;
@@ -33,8 +33,8 @@ public class RpcNettyServer {
 
     private final ServiceProvider serviceProvider = SingletonFactory.getInstance(ServiceProviderImpl.class);
 
-    public void registerService(RpcSerciceConfig rpcSerciceConfig){
-        serviceProvider.publishService(rpcSerciceConfig);
+    public void registerService(RpcServiceConfig rpcServiceConfig){
+        serviceProvider.publishService(rpcServiceConfig);
     }
 
     @SneakyThrows

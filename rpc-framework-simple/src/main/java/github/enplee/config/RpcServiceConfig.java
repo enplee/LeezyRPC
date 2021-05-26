@@ -13,7 +13,7 @@ import lombok.*;
 @Setter
 @Builder
 @ToString
-public class RpcSerciceConfig {
+public class RpcServiceConfig {
 
 
     private String version = "";

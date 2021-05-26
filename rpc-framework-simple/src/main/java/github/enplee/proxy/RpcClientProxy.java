@@ -1,14 +1,13 @@
 package github.enplee.proxy;
 
 
-import github.enplee.config.RpcSerciceConfig;
+import github.enplee.config.RpcServiceConfig;
 import github.enplee.enums.RpcErrorMessageEnum;
 import github.enplee.enums.RpcResponseCodeEnum;
 import github.enplee.exception.RpcException;
 import github.enplee.remoting.dto.RpcRequest;
 import github.enplee.remoting.dto.RpcResponce;
 import github.enplee.remoting.transport.RpcRequestTransposter;
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.InvocationHandler;
@@ -29,11 +28,11 @@ import java.util.concurrent.CompletableFuture;
 public class RpcClientProxy implements InvocationHandler {
 
     private static final String INTERFACE_NAME = "interfaceName :";
-    private final RpcSerciceConfig rpcSerciceConfig;
+    private final RpcServiceConfig rpcServiceConfig;
     private final RpcRequestTransposter rpcRequestTransposter;
 
-    public RpcClientProxy(RpcSerciceConfig rpcSerciceConfig, RpcRequestTransposter rpcRequestTransposter) {
-        this.rpcSerciceConfig = rpcSerciceConfig;
+    public RpcClientProxy(RpcServiceConfig rpcServiceConfig, RpcRequestTransposter rpcRequestTransposter) {
+        this.rpcServiceConfig = rpcServiceConfig;
         this.rpcRequestTransposter = rpcRequestTransposter;
     }
     
@@ -51,8 +50,8 @@ public class RpcClientProxy implements InvocationHandler {
                                 .args(args)
                                 .argsType(method.getParameterTypes())
                                 .requestId(UUID.randomUUID().toString())
-                                .group(rpcSerciceConfig.getGroup())
-                                .version(rpcSerciceConfig.getVersion())
+                                .group(rpcServiceConfig.getGroup())
+                                .version(rpcServiceConfig.getVersion())
                                 .serviceName(method.getDeclaringClass().getName()).build();
         // rpcTransport::sendRpcRequest
         RpcResponce<Object> rpcResponce = null;

@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b40d34d-8ad9-4a11-a979-023b803fe018" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/SpringBeanPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/anotation/RpcRefence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/spring/anotation/RpcService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rpc-client-example/src/main/java/github/enplee/nospring/NoSpringClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rpc-client-example/src/main/java/github/enplee/nospring/NoSpringClientMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rpc-server-example/src/main/java/github/enplee/nospring/NoSpringServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rpc-server-example/src/main/java/github/enplee/nospring/NoSpringServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rpc-server-example/src/main/java/github/enplee/serviceImpl/TestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rpc-server-example/src/main/java/github/enplee/serviceImpl/TestServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/config/RpcSerciceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/config/RpcServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/provider/ServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/provider/ServiceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/provider/impl/ServiceProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/provider/impl/ServiceProviderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/proxy/RpcClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/proxy/RpcClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/transport/server/RpcNettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-framework-simple/src/main/java/github/enplee/remoting/transport/server/RpcNettyServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -107,13 +119,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -235,7 +249,8 @@
       <workItem from="1621665496629" duration="806000" />
       <workItem from="1621736807114" duration="13397000" />
       <workItem from="1621821499694" duration="18530000" />
-      <workItem from="1621924409031" duration="3625000" />
+      <workItem from="1621924409031" duration="10145000" />
+      <workItem from="1621942962036" duration="3604000" />
     </task>
     <servers />
   </component>
@@ -255,10 +270,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="576" y="274" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1620979807191" />
-    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1621822465299">
+    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1621942495854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621822465299" />
+    <state x="753" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621942495854" />
     <state x="500" y="129" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1620988503591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -268,6 +283,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="481" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621596906022" />
+    <state x="653" y="194" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1621942910307">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="653" y="194" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621942910307" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1620998898006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -281,26 +300,26 @@
     </state>
     <state x="-1020" y="635" key="FileChooserDialogImpl/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1620978284894" />
     <state x="696" y="223" key="FileChooserDialogImpl/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621861648262" />
-    <state width="1876" height="223" key="GridCell.Tab.0.bottom" timestamp="1621857770437">
+    <state width="1876" height="223" key="GridCell.Tab.0.bottom" timestamp="1621945421773">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1556" height="671" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1621426519390" />
-    <state width="1876" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621857770437" />
-    <state width="1876" height="223" key="GridCell.Tab.0.center" timestamp="1621857770437">
+    <state width="1876" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621945421773" />
+    <state width="1876" height="223" key="GridCell.Tab.0.center" timestamp="1621945421773">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1556" height="671" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1621426519390" />
-    <state width="1876" height="223" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621857770437" />
-    <state width="1876" height="223" key="GridCell.Tab.0.left" timestamp="1621857770436">
+    <state width="1876" height="223" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621945421773" />
+    <state width="1876" height="223" key="GridCell.Tab.0.left" timestamp="1621945421773">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1556" height="671" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1621426519390" />
-    <state width="1876" height="223" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621857770436" />
-    <state width="1876" height="223" key="GridCell.Tab.0.right" timestamp="1621857770437">
+    <state width="1876" height="223" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621945421773" />
+    <state width="1876" height="223" key="GridCell.Tab.0.right" timestamp="1621945421773">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1556" height="671" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.451.1600.860@-1600.451.1600.860" timestamp="1621426519390" />
-    <state width="1876" height="223" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621857770437" />
+    <state width="1876" height="223" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621945421773" />
     <state width="1921" height="356" key="GridCell.Tab.1.bottom" timestamp="1621063859749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -321,6 +340,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621066769358" />
+    <state x="490" y="174" key="Maven.ArtifactSearchDialog" timestamp="1621942708935">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="174" key="Maven.ArtifactSearchDialog/0.0.1920.1040/-1600.451.1600.860@0.0.1920.1040" timestamp="1621942708935" />
     <state x="361" y="89" key="SettingsEditor" timestamp="1620987346533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

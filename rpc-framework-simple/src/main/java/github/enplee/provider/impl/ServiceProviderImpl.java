@@ -1,6 +1,6 @@
 package github.enplee.provider.impl;
 
-import github.enplee.config.RpcSerciceConfig;
+import github.enplee.config.RpcServiceConfig;
 import github.enplee.enums.RpcErrorMessageEnum;
 import github.enplee.exception.RpcException;
 import github.enplee.provider.ServiceProvider;
@@ -30,14 +30,14 @@ public class ServiceProviderImpl implements ServiceProvider {
     }
 
     @Override
-    public void addService(RpcSerciceConfig rpcSerciceConfig) {
-        String rpcServiceName = rpcSerciceConfig.getRpcServiceName();
+    public void addService(RpcServiceConfig rpcServiceConfig) {
+        String rpcServiceName = rpcServiceConfig.getRpcServiceName();
         if(registedServiceSet.contains(rpcServiceName)){
             return;
         }
         registedServiceSet.add(rpcServiceName);
-        serviceMap.put(rpcServiceName,rpcSerciceConfig.getService());
-        log.info("Add service [{}] and interface:{}", rpcServiceName, rpcSerciceConfig.getService().getClass().getInterfaces());
+        serviceMap.put(rpcServiceName, rpcServiceConfig.getService());
+        log.info("Add service [{}] and interface:{}", rpcServiceName, rpcServiceConfig.getService().getClass().getInterfaces());
     }
 
     @Override
@@ -50,10 +50,10 @@ public class ServiceProviderImpl implements ServiceProvider {
     }
 
     @Override
-    public void publishService(RpcSerciceConfig rpcSerciceConfig) {
+    public void publishService(RpcServiceConfig rpcServiceConfig) {
         try {
-            String rpcServiceName = rpcSerciceConfig.getRpcServiceName();
-            addService(rpcSerciceConfig);
+            String rpcServiceName = rpcServiceConfig.getRpcServiceName();
+            addService(rpcServiceConfig);
             String host = InetAddress.getLocalHost().getHostAddress();
             serviceRegistry.registerService(rpcServiceName,new InetSocketAddress(host, RpcNettyServer.PORT));
         } catch (UnknownHostException e) {

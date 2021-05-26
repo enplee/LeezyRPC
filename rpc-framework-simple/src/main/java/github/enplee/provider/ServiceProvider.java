@@ -1,6 +1,6 @@
 package github.enplee.provider;
 
-import github.enplee.config.RpcSerciceConfig;
+import github.enplee.config.RpcServiceConfig;
 
 /**
  *  @author: leezy
@@ -10,9 +10,9 @@ import github.enplee.config.RpcSerciceConfig;
  */
 public interface ServiceProvider {
 
-    void addService(RpcSerciceConfig rpcSerciceConfig);
+    void addService(RpcServiceConfig rpcServiceConfig);
 
     Object getService(String rpcServiceName);
 
-    void publishService(RpcSerciceConfig rpcSerciceConfig);
+    void publishService(RpcServiceConfig rpcServiceConfig);
 }
