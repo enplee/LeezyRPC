@@ -1,5 +1,5 @@
 # LeezyRPC-framework
-### 介绍
+# 🌐 介绍
 
 手动造了个Netty+Zookeeper+Kyro实现的RPC轮子。作为第一次完整的项目设计，主要参考了guide哥的[guide-rpc-framework](https://github.com/Snailclimb/guide-rpc-framework) 框架的实现方案。实现这个RPC框架的目的是加深自己对Netty、Zookeeper等框架的使用，丰富自己的项目设计经验以及锻炼自己的代码能力。整个项目的架构图：
 
@@ -12,7 +12,7 @@
 + **动态代理** rpc的核心要义就是远程的方法调用像调用本地方法一样简单，那么就需要代理模式来屏蔽掉编解码、网络传输等实现细节。
 + **传输协议** 需要将请求的二进制流封装为frame，避免粘包，方便拆包，一个好的协议设计是保证req/resp稳定的根本。
 
-### Todo List
+# 🚀 功能
 - [x] 传输协议设计，定义Rpcresquest/Rpcresponce/Fream等。
 - [x] 基于Netty实现Rpcmessage的传输接收、编码解码。
 - [x] 基于kyro、protostuff实现对象序列化与反序列化，Gzip实现压缩传输。
@@ -24,3 +24,19 @@
 - [x] 通过JDK自带的动态代理方式屏蔽调用过程。
 - [ ] 使用Spring注解的方式实现实现服务的注册和消费。
 - [ ] 增加SPI机制的应用，实现接口和实现解耦。 
+
+### 版本控制
+
+该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
+
+### 作者
+
+E-mail: li_zhe@csu.edu.cn
+
+博客:[enplee的博客](http://enplee.github.io)    
+
+ *您也可以在贡献者名单中参看所有参与该项目的开发者。*
+
+### 版权说明
+
+该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/enplee/leezyRPC/master/LICENSE.txt)
