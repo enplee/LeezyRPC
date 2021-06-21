@@ -81,7 +81,6 @@ public class RpcMessageDecoder extends LengthFieldBasedFrameDecoder {
             byte[] bytes = new byte[bodyLength];
             in.readBytes(bytes);
             //TODO: 使用SPI机制，让接口和实现解耦
-
             //decompress the bytes accoding to the compressType
             Compressor compressor = new GzipCompressor();
             byte[] decompress = compressor.decompress(bytes);
